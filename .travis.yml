@@ -1,2 +1,35 @@
+language:
+  - cpp
+
+compiler:
+  - gcc
+
 sudo: required
+
 dist: trusty
+
+notifications:
+  email:
+    recipients:
+      - aswinthomas@hopetechnik.com
+      - alainminier@hopetechnik.com
+    on_success: change #[always|never|change] # default: change
+    on_failure: always #[always|never|change] # default: always
+
+before_install: # Use this to prepare the system to install prerequisites or dependencies
+  - export CI_SOURCE_PATH=$(pwd)
+  - export REPOSITORY_NAME=${PWD##*/}
+  - echo "Testing branch $TRAVIS_BRANCH of $REPOSITORY_NAME"
+
+install: # Use this to install any prerequisites or dependencies necessary to run your build
+#  - ./scripts/install_dependencies.sh
+
+script: 
+  - # Set up ROS workspace
+#  - . ./scripts/shared.sh
+#  - sourceROS
+#  - cd src
+#  - catkin_init_workspace 
+#  - cd ..
+#  - catkin_make -j8
+
