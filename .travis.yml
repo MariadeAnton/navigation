@@ -41,7 +41,7 @@ before_script: # Use this to prepare your build
 
 script: 
   - # Set up ROS workspace
-  - . ./scripts/shared.sh
+  - cd $WS/$REPOSITORY_NAME && ./scripts/shared.sh
   - sourceROS
   - cd $WS
   - catkin_init_workspace 
