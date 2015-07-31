@@ -1,12 +1,12 @@
+sudo: required
+
+dist: trusty
+
 language:
   - cpp
 
 compiler:
   - gcc
-
-sudo: required
-
-#dist: trusty
 
 notifications:
   email:
