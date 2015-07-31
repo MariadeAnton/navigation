@@ -25,15 +25,15 @@ install: # Use this to install any prerequisites or dependencies necessary to ru
   - ./scripts/install_dependencies.sh
 
 before_script: # Use this to prepare your build
-  - export CATKIN_WS = ~/catkin_ws/src
-  - mkdir -p ~/catkin_ws/src
-  - if [ "$TRAVIS" = true ] && [ "CI" = true ]; then mv $TRAVIS_BUILD_DIR CATKIN_WS; fi
+  - export WS=~/catkin_ws/src
+  - mkdir -p WS
+  - if [ "$TRAVIS" = true ] && [ "CI" = true ]; then mv $TRAVIS_BUILD_DIR WS; fi
 
 script: 
   - # Set up ROS workspace
   - . ./scripts/shared.sh
   - sourceROS
-  - cd CATKIN_WS
+  - cd WS
   - catkin_init_workspace 
   - ls
   - cd ..
