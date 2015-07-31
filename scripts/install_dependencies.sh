@@ -58,6 +58,4 @@ rosdep update
 
 # Other ROS packages
 sudo apt-get install -y ros-hydro-cmake-modules
-#other packages
-sudo apt-get install libpgm-dev
 set -e
