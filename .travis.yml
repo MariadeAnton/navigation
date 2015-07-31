@@ -45,6 +45,6 @@ script:
   - cd $WS
   - catkin_init_workspace 
   - cd ..
-  - catkin_make -j8
+  - catkin_make -j4
   - catkin_make run_tests
 
