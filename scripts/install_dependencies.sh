@@ -15,13 +15,15 @@ echo "Current directory: "$DIR
 source $DIR/shared.sh
 sourceROS
 
+set +e
 # Check Ubuntu release
 codename=`lsb_release --codename | cut -f2`
+echo "Ubuntu "$codename
 case $codename in
   # | --- indigo --- |   
   # | 13.10 |  14.04 |
   "saucy"|"trusty");;
-  *) 	echo "Ubuntu  `lsb_release --release | cut -f2` not officially supported. Manual installation is suggested."
+  *) 	echo "Ubuntu `lsb_release --release | cut -f2` not supported. Manual installation is suggested."
   if confirm; then
     exit
   fi;;
@@ -42,3 +44,5 @@ sudo apt-get install -y ros-$ROS_DISTRO-desktop-full
 source /opt/ros/$ROS_DISTRO/setup.bash
 sudo rosdep init | sed "s/ERROR: default/WARNING: default/"
 rosdep update
+
+set -e
