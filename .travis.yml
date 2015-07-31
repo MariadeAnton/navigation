@@ -37,6 +37,7 @@ before_script: # Use this to prepare your build
   - export WS=~/catkin_ws/src
   - mkdir -p $WS
   - mv $TRAVIS_BUILD_DIR $WS
+  - cd $WS && rosdep install --from-paths . --ignore-src --rosdistro=hydro
 
 script: 
   - # Set up ROS workspace
