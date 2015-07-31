@@ -56,6 +56,8 @@ source /opt/ros/$ROS_DISTRO/setup.bash
 sudo rosdep init | sed "s/ERROR: default/WARNING: default/"
 rosdep update
 
-# Other packages
+# Other ROS packages
 sudo apt-get install -y ros-hydro-cmake-modules
+#other packages
+sudo apt-get install libpgm-dev
 set -e
