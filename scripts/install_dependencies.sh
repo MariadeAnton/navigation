@@ -18,7 +18,7 @@ source $DIR/shared.sh
 set +e && sourceROS && set -e # ROS setup.bash can't be run in a strict bash :(
 
 # Manage ROS installation
-if[ $ROS_DISTRO == "indigo"]; then
+if[[ $ROS_DISTRO == 'indigo' ]]; then
   echo "ROS $ROS_DISTRO seems already installed. Calling apt-get install again to make sure"
  
   # Check Ubuntu release
