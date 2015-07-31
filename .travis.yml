@@ -37,5 +37,5 @@ script:
   - catkin_init_workspace 
   - ls
   - cd ..
-  - catkin_make -j8
+  - catkin_make -j4
 

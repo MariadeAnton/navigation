@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/aswinhope/navigation.svg?branch=hydro-devel)](https://travis-ci.org/aswinhope/navigation)
+
 ROS Navigation Stack
 ====================
 
