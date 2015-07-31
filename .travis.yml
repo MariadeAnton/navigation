@@ -2,8 +2,7 @@ language:
   - cpp
 
 compiler:
-#  - gcc
-  - clang
+  - gcc
 
 sudo: required
 
@@ -38,6 +37,6 @@ script:
   - cd $WS
   - catkin_init_workspace 
   - cd ..
-  - catkin_make
+  - catkin_make -j1
   - catkin_make run_tests
 
