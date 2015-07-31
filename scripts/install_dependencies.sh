@@ -51,7 +51,7 @@ fi
 #  exit
 #fi
 
-sudo apt-get install -y ros-$ROS_DISTRO-desktop-full
+sudo apt-get install -y ros-$ROS_DISTRO-desktop
 source /opt/ros/$ROS_DISTRO/setup.bash
 sudo rosdep init | sed "s/ERROR: default/WARNING: default/"
 rosdep update
